@@ -1,0 +1,88 @@
+// Catálogo levantado da pasta "Vista Explodida" do Google Drive.
+// Cada categoria = uma pasta; cada produto = uma subpasta (quando existe).
+export const CATEGORIAS = [
+  { id: 'bombas', nome: "Bombas D'água", icone: 'droplet', produtos: ['BP500', 'BP1000', 'BPA500', 'BPA1000', 'BA1000', 'BC500', 'BC1000', 'BS750', 'BSS500', 'BST500', 'BSD1000', 'BSC2-300', 'BSC3-500', 'BSC4-1000', 'BFL120', 'BFL300'] },
+  { id: 'lavadoras', nome: 'Lavadoras de Alta Pressão', icone: 'spray', produtos: ['Acqua1200', 'Acqua1400', 'Alabama', 'Arizona', 'California', 'Montana', 'Nevada', 'Texas'] },
+  { id: 'compressor', nome: 'Compressores', icone: 'gauge', produtos: ['CE320', 'CE325', 'CP05', 'WINDJET'] },
+  { id: 'pneumaticas', nome: 'Ferramentas Pneumáticas', icone: 'wrench', produtos: ['PN300', 'PN400', 'PN500', 'PN600', 'PN700', 'PN800'] },
+  { id: 'pistolas', nome: 'Pistolas de Pintura', icone: 'paint', produtos: ['P162', 'P301', 'P472', 'P820', 'P827', 'P990', 'P4001', 'HV400', 'HV500', 'HV600', 'KT1000', 'PAINT'] },
+  { id: 'inversora', nome: 'Inversoras de Solda', icone: 'bolt', produtos: ['SMI130', 'SMI160', 'SMI200', 'SMI250', 'SMIB160', 'SMIG160', 'STIG160'] },
+  { id: 'rocadeira', nome: 'Roçadeiras', icone: 'leaf', produtos: ['SKIM4200', 'SKIM4200 - Multi', 'SKIM4300', 'SKIM5100 Bipartida', 'SKIM5500', 'SKIM5500 - Multi'] },
+  { id: 'motosserra', nome: 'Motosserras e Eletrosserras', icone: 'saw', produtos: ['Saw1200', 'Saw2400', 'Saw3800', 'Saw5200'] },
+  { id: 'pulverizador', nome: 'Pulverizadores', icone: 'spray', produtos: ['GP50', 'GP150', 'GP500', 'GP2000', 'GPE2000', 'GPM2000'] },
+  { id: 'bomba-pulv', nome: 'Bombas Pulverizadoras', icone: 'droplet', produtos: ['PULV22', 'PULV45'] },
+  { id: 'mascara', nome: 'Máscaras de Solda', icone: 'mask', produtos: ['SMC2', 'SMC4'] },
+  { id: 'aspirador', nome: 'Aspiradores', icone: 'wind', produtos: [] },
+  { id: 'boia', nome: 'Boias Elétricas', icone: 'droplet', produtos: [] },
+  { id: 'estufa', nome: 'Estufas de Eletrodos', icone: 'flame', produtos: [] },
+  { id: 'filtro', nome: 'Filtros e Reguladores de Ar', icone: 'gauge', produtos: [] },
+  { id: 'furadeira', nome: 'Furadeiras de Bancada', icone: 'drill', produtos: [] },
+  { id: 'motoesmeril', nome: 'Motoesmeris', icone: 'disc', produtos: [] },
+  { id: 'talha', nome: 'Talhas Manuais', icone: 'chain', produtos: [] },
+  { id: 'trena', nome: 'Trenas a Laser', icone: 'ruler', produtos: [] },
+  { id: 'vaporizador', nome: 'Vaporizadores', icone: 'flame', produtos: [] },
+];
+
+// Produtos com vista explodida 3D pronta
+export const PRODUTOS_3D = { BP500: 'produto-bp500.html' };
+
+// BP500 — dados técnicos (site oficial)
+export const BP500_SPECS = [
+  ['Potência', '½ HP'],
+  ['Voltagem', '127V ou 220V'],
+  ['Vazão', '33 l/min'],
+  ['Sucção Máxima', '8 m'],
+  ['Altura Manométrica Máxima', '26 m'],
+  ['Alimentação', 'Eletricidade'],
+  ['Consumo', '0,37 kW/h'],
+  ['Sucção e Recalque', '1" x 1"'],
+  ['Frequência', '60 Hz'],
+  ['Rotação', '3.450 RPM'],
+  ['Temperatura máx. água', '40 °C'],
+  ['Classe de proteção', 'IP44'],
+  ['Peso bruto', '4,05 kg'],
+  ['Dimensões (LAP)', '27 x 17 x 13,5 cm'],
+];
+
+// BP500 — lista de peças (planilha "BP500 - Novo.xlsx" + PDF da vista explodida)
+// codigos: [código, observação]
+export const BP500_PECAS = [
+  { n: 1, pt: 'Tampa de plástico 1', en: 'Plastic Cover', codigos: [['BP5000B1']], grupo: 'Hidráulica' },
+  { n: 2, pt: 'Parafuso cabeça', en: 'Bolt', codigos: [['BP500001']], grupo: 'Hidráulica' },
+  { n: 3, pt: 'Tampa frontal (caracol)', en: 'Pump Casing', codigos: [['BP500002']], grupo: 'Hidráulica' },
+  { n: 4, pt: 'Anel de vedação', en: 'O-ring', codigos: [['BP500004']], grupo: 'Hidráulica' },
+  { n: 5, pt: 'Parafuso do dreno', en: 'Charge plug', codigos: [['BP500003']], grupo: 'Hidráulica' },
+  { n: 6, pt: 'Tampa de plástico 2', en: 'Plastic Cover', codigos: [['BP5000B6']], grupo: 'Hidráulica' },
+  { n: 7, pt: 'Anel O-ring', en: 'O-ring', codigos: [['BP500023']], grupo: 'Hidráulica' },
+  { n: 8, pt: 'Rotor de água (impulsor)', en: 'Impeller', codigos: [['BP500005']], grupo: 'Hidráulica' },
+  { n: 9, pt: 'Anel trava', en: 'Lock Ring', codigos: [['BP500006']], grupo: 'Hidráulica' },
+  { n: 10, pt: 'Gaxeta do selo mecânico', en: 'Washer', codigos: [['BP500B10']], grupo: 'Hidráulica' },
+  { n: 11, pt: 'Selo mecânico 103-12', en: 'Mechanical Seal', codigos: [['BP500007']], grupo: 'Hidráulica' },
+  { n: 12, pt: 'Parafuso da tampa intermediária', en: 'Bolt', codigos: [['BP500B12']], grupo: 'Hidráulica' },
+  { n: 13, pt: 'Tampa intermediária', en: 'Pump Support', codigos: [['BP500008']], grupo: 'Hidráulica' },
+  { n: 14, pt: 'Corpo da bomba', en: 'Motor Frame', codigos: [['BP500012']], grupo: 'Motor' },
+  { n: 15, pt: 'Protetor do cabo elétrico', en: 'Failead', codigos: [['BPA00003', 'BA/BP/BC/BPA'], ['BPA0001', 'Cabo elétrico (15-1)']], grupo: 'Elétrica' },
+  { n: 16, pt: 'Parafuso de pressão', en: 'Bolt', codigos: [['BP500016']], grupo: 'Elétrica' },
+  { n: 17, pt: 'Marca de aterramento', en: 'Earthing Mark', codigos: [['BP500B17']], grupo: 'Elétrica' },
+  { n: 18, pt: 'Prensador de cabo', en: 'Cable Presser', codigos: [['BP500B18']], grupo: 'Elétrica' },
+  { n: 19, pt: 'Parafuso', en: 'Bolt', codigos: [['BP500B19']], grupo: 'Elétrica' },
+  { n: 20, pt: 'O-ring', en: 'O-ring', codigos: [['BP500B20']], grupo: 'Elétrica' },
+  { n: 21, pt: 'Capacitor', en: 'Capacitor', codigos: [['BP500021', '127V'], ['BP500021-1', '220V']], grupo: 'Elétrica' },
+  { n: 22, pt: 'Placa de terminal', en: 'Wiring cap', codigos: [['BP500020']], grupo: 'Elétrica' },
+  { n: 23, pt: 'Chave seletora 127V/220V', en: '127V to 220V Switch', codigos: [['—', 'não consta na planilha']], grupo: 'Elétrica' },
+  { n: 24, pt: 'Tampa da caixa elétrica', en: 'Terminal cover', codigos: [['BP500B24'], ['BP500019a', 'c/ identificação 127V'], ['BP500019b', 'c/ identificação 220V']], grupo: 'Elétrica' },
+  { n: 25, pt: 'Parafuso da tampa de identificação', en: 'Bolt', codigos: [['BP500022']], grupo: 'Elétrica' },
+  { n: 26, pt: 'Placa de identificação', en: 'Rating plate', codigos: [['BP500B26']], grupo: 'Elétrica' },
+  { n: 27, pt: 'Parafuso de aperto', en: 'Clinch bolt', codigos: [['BP500B27']], grupo: 'Elétrica' },
+  { n: 28, pt: 'Estator com corpo', en: 'Stator with coil', codigos: [['BP500013a', '127V'], ['BP500013b', '220V']], grupo: 'Motor' },
+  { n: 29, pt: 'Protetor térmico', en: 'Protector', codigos: [['BP500B29']], grupo: 'Motor' },
+  { n: 30, pt: 'Rolamento dianteiro', en: 'Bearing', codigos: [['BP500010', 'BP/BC/BA/BPA500']], grupo: 'Motor' },
+  { n: 31, pt: 'Chaveta', en: 'Key', codigos: [['BP500011']], grupo: 'Motor' },
+  { n: 32, pt: 'Induzido (eixo do rotor)', en: 'Rotor', codigos: [['BP500009']], grupo: 'Motor' },
+  { n: 33, pt: 'Rolamento traseiro', en: 'Bearing', codigos: [['BP500010', 'BP/BC/BA/BPA500']], grupo: 'Motor' },
+  { n: 34, pt: 'Arruela mola', en: 'Wave washer', codigos: [['BP500015']], grupo: 'Motor' },
+  { n: 35, pt: 'Tampa do motor', en: 'Driving cap', codigos: [['BP500014']], grupo: 'Motor' },
+  { n: 36, pt: 'Parafuso da tampa do motor', en: 'Bolt', codigos: [['BP500B36']], grupo: 'Motor' },
+  { n: 37, pt: 'Ventoinha', en: 'Fan', codigos: [['BP500017', 'BP500/BC500/BPA500']], grupo: 'Ventilação' },
+  { n: 38, pt: 'Tampa da ventoinha', en: 'Fan cover', codigos: [['BP500018', 'BP500/BPA500']], grupo: 'Ventilação' },
+];

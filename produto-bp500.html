@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BP500 Vista Explodida — Intech Machine</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<script type="importmap">
+{ "imports": {
+  "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+} }
+</script>
+</head>
+<body>
+<div class="topbar"><div class="wrap"><span>Catálogo técnico de peças e vistas explodidas</span><span>Suporte ao Consumidor</span></div></div>
+<header class="site"><div class="wrap">
+  <a class="logo" href="index.html"><img src="assets/img/logo.png" alt="Intech Machine"><small>Máquinas e Ferramentas</small></a>
+  <nav class="main"><a href="https://intechmachine.com.br/">Home</a><a class="on" href="index.html">Vista Explodida</a><a href="https://intechmachine.com.br/produtos/">Produtos</a><a href="https://intechmachine.com.br/onde-comprar/">Onde Comprar</a></nav>
+</div></header>
+
+<main class="wrap">
+  <div class="crumbs"><a href="index.html">Vista Explodida</a> › <a href="index.html">Bombas D'água</a> › <b>Bomba d'água periférica BP500</b></div>
+
+  <div class="prod-top">
+    <div class="viewer" id="viewer">
+      <div class="stage" style="position:absolute;inset:0"></div>
+      <div class="labels"></div>
+      <div class="loading" id="loading">Carregando modelo 3D…</div>
+      <div class="mode">
+        <button class="btn ghost" id="bLabels" title="Mostrar números das peças">Nº peças</button>
+        <button class="btn ghost" id="bRotate" title="Girar automaticamente">Girar</button>
+        <button class="btn ghost" id="bReset" title="Voltar à vista inicial">Resetar</button>
+      </div>
+      <div class="hint">Arraste para girar · role para zoom · clique numa peça</div>
+      <div class="tip" id="tip"></div>
+      <div class="hud">
+        <label for="explode">Montada</label>
+        <input id="explode" type="range" min="0" max="100" value="0">
+        <label for="explode">Explodida</label>
+        <button class="btn" id="bToggle">Explodir</button>
+      </div>
+    </div>
+
+    <div class="info">
+      <h1>Bomba d'água periférica BP500</h1>
+      <p class="sub">½ HP · 33 l/min · Vista explodida interativa com 38 posições</p>
+      <div class="badges"><span><b>½ HP</b> potência</span><span><b>33 l/min</b> vazão</span><span><b>26 m</b> alt. manométrica</span><span><b>8 m</b> sucção</span></div>
+      <div class="thumbs" id="thumbs">
+        <img src="assets/img/BP500-600x600.jpg" alt="BP500">
+        <img src="assets/img/BP500-b-600x600.jpg" alt="BP500 lateral">
+        <img src="assets/img/BP500-c-1-600x600.jpg" alt="BP500 detalhe">
+        <img src="assets/img/BP500-2-descritiva-600x600.jpg" alt="BP500 descritiva">
+        <img src="assets/img/BP500-cm-caixa-600x600.jpg" alt="BP500 com caixa">
+      </div>
+      <div class="part-card" id="card">
+        <h3>Selecione uma peça</h3>
+        <p>Clique em uma peça no modelo 3D ou na tabela de componentes para ver o nome, a posição e o código de reposição.</p>
+      </div>
+    </div>
+  </div>
+
+  <section class="tabs">
+    <div class="tablist" role="tablist">
+      <button class="on" data-tab="pecas">Peças (vista explodida)</button>
+      <button data-tab="dados">Dados Técnicos</button>
+      <button data-tab="desc">Descritivo Comercial</button>
+      <button data-tab="itens">Itens que compõem o produto</button>
+      <button data-tab="docs">Downloads</button>
+    </div>
+
+    <div class="tabpanel on" id="tab-pecas">
+      <div class="parts-tools" id="filters"></div>
+      <div class="table-scroll"><table class="parts">
+        <thead><tr><th>Pos.</th><th>Descrição</th><th>Código(s)</th><th>Grupo</th></tr></thead>
+        <tbody id="parts"></tbody>
+      </table></div>
+    </div>
+
+    <div class="tabpanel" id="tab-dados"><table class="specs" id="specs"></table></div>
+
+    <div class="tabpanel" id="tab-desc"><div class="desc">
+      <p>A Bomba Periférica BP500 é indicada para transferência de água limpa de poços e cisternas para residências, pequenos edifícios (até 2 andares), pequenas irrigações e pequenas indústrias. Também pode ser usada para transferência de água limpa em praias e áreas rurais.</p>
+      <ul>
+        <li>Sucção máxima de 8 metros</li>
+        <li>Vazão máxima de 1.980 litros por hora</li>
+        <li>Rolamento DDU e selo mecânico</li>
+        <li>Corpo e tampa em ferro fundido</li>
+        <li>Rotor em latão</li>
+        <li>Fácil instalação</li>
+      </ul>
+      <p class="warn">Não indicada para ligação direta à rede pública (que contém ar) — para isso, use os modelos autoescorvantes BPA500 e BPA1000. Use somente com água limpa; não indicada para piscinas ou áreas alagadas.</p>
+    </div></div>
+
+    <div class="tabpanel" id="tab-itens"><div class="desc"><ul><li>1 Bomba Periférica BP500</li><li>1 Manual do Usuário</li></ul></div></div>
+
+    <div class="tabpanel" id="tab-docs"><div class="desc">
+      <p><a class="btn" href="assets/docs/BP500-vista-explodida.pdf" target="_blank">Vista explodida oficial (PDF)</a></p>
+      <p><a class="btn ghost" href="https://intechmachine.com.br/wp-content/uploads/2019/03/BP500-Manual-de-instrucoes-1.pdf" target="_blank">Manual de instruções (PDF)</a></p>
+    </div></div>
+  </section>
+</main>
+
+<div class="lightbox" id="lb"><img alt=""></div>
+<footer class="site"><div class="wrap"><span>Intech Machine — Máquinas e Ferramentas</span><span>Modelo 3D ilustrativo baseado na vista explodida oficial.</span></div></footer>
+
+<script type="module">
+import { BP500_PECAS, BP500_SPECS } from './assets/js/data.js';
+import { createViewer } from './assets/js/bp500-3d.js';
+
+const $ = s => document.querySelector(s);
+const byN = new Map(BP500_PECAS.map(p => [p.n, p]));
+
+// especificações
+$('#specs').innerHTML = BP500_SPECS.map(([k, v]) => `<tr><td>${k}</td><td>${v}</td></tr>`).join('');
+
+// tabela de peças + filtros
+const grupos = ['Todas', ...new Set(BP500_PECAS.map(p => p.grupo))];
+let grupo = 'Todas';
+const codes = p => p.codigos.map(([c, o]) => `<code>${c}${o ? ` <i>${o}</i>` : ''}</code>`).join('');
+function renderTable() {
+  $('#filters').innerHTML = grupos.map(g => `<button class="btn ghost ${g === grupo ? 'on' : ''}" data-g="${g}">${g}</button>`).join('');
+  $('#parts').innerHTML = BP500_PECAS.filter(p => grupo === 'Todas' || p.grupo === grupo).map(p =>
+    `<tr data-n="${p.n}"><td>${p.n}</td><td>${p.pt}<div class="en">${p.en}</div></td><td>${codes(p)}</td><td><span class="grp">${p.grupo}</span></td></tr>`).join('');
+  markRow();
+}
+$('#filters').addEventListener('click', e => { const b = e.target.closest('[data-g]'); if (b) { grupo = b.dataset.g; renderTable(); } });
+
+let sel = null;
+function markRow() { document.querySelectorAll('#parts tr').forEach(r => r.classList.toggle('on', +r.dataset.n === sel)); }
+function showCard(n) {
+  const p = byN.get(n);
+  if (!p) { $('#card').innerHTML = '<h3>Selecione uma peça</h3><p>Clique em uma peça no modelo 3D ou na tabela de componentes para ver o nome, a posição e o código de reposição.</p>'; return; }
+  $('#card').innerHTML = `<h3><span class="n">${p.n}</span>${p.pt}</h3><p>${p.en} · grupo ${p.grupo}</p>
+    <div class="codes">${codes(p)}</div>
+    <div class="actions"><button class="btn ghost" id="bIso">${iso ? 'Mostrar todas' : 'Isolar peça'}</button><button class="btn ghost" id="bClear">Limpar seleção</button></div>`;
+}
+let iso = false;
+function choose(n, fromTable = false) {
+  sel = n ?? null; if (sel == null && iso) { iso = false; viewer.setIsolate(false); }
+  viewer.select(sel, fromTable); showCard(sel); markRow();
+}
+$('#card').addEventListener('click', e => {
+  if (e.target.id === 'bIso') { iso = !iso; viewer.setIsolate(iso); showCard(sel); }
+  if (e.target.id === 'bClear') choose(null);
+});
+$('#parts').addEventListener('click', e => {
+  const r = e.target.closest('tr'); if (!r) return;
+  if (viewer.getExplode() < 0.5) setExplode(1);
+  choose(+r.dataset.n, true);
+  $('#viewer').scrollIntoView({ behavior: 'smooth', block: 'center' });
+});
+
+// visualizador 3D
+const viewerEl = $('#viewer');
+const viewer = createViewer(viewerEl, { onSelect: n => choose(n) });
+$('#loading').remove();
+const tip = $('#tip');
+tip.addEventListener('part', e => { const p = byN.get(e.detail); tip.innerHTML = `<b>${p.n}</b>${p.pt}`; });
+
+const slider = $('#explode'), bToggle = $('#bToggle');
+function setExplode(t) { viewer.setExplode(t, true); slider.value = Math.round(t * 100); bToggle.textContent = t > 0.5 ? 'Montar' : 'Explodir'; }
+slider.addEventListener('input', () => { viewer.setExplode(slider.value / 100); bToggle.textContent = slider.value > 50 ? 'Montar' : 'Explodir'; });
+slider.addEventListener('change', () => viewer.setExplode(slider.value / 100, true));
+bToggle.addEventListener('click', () => setExplode(viewer.getExplode() > 0.5 ? 0 : 1));
+$('#bLabels').addEventListener('click', e => { viewerEl.classList.toggle('show-labels'); e.target.classList.toggle('on'); });
+$('#bRotate').addEventListener('click', e => { const on = !e.target.classList.contains('on'); e.target.classList.toggle('on', on); viewer.setAutoRotate(on); });
+$('#bReset').addEventListener('click', () => { iso = false; choose(null); viewer.reset(); });
+
+// galeria
+document.getElementById('thumbs').addEventListener('click', e => { if (e.target.tagName === 'IMG') { $('#lb img').src = e.target.src; $('#lb').classList.add('on'); } });
+$('#lb').addEventListener('click', () => $('#lb').classList.remove('on'));
+
+// abas
+document.querySelector('.tablist').addEventListener('click', e => {
+  const b = e.target.closest('button'); if (!b) return;
+  document.querySelectorAll('.tablist button').forEach(x => x.classList.toggle('on', x === b));
+  document.querySelectorAll('.tabpanel').forEach(x => x.classList.toggle('on', x.id === 'tab-' + b.dataset.tab));
+});
+
+renderTable();
+setTimeout(() => setExplode(1), 700); // abre já explodida após carregar
+</script>
+</body>
+</html>
